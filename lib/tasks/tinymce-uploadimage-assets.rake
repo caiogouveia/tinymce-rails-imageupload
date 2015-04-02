@@ -1,4 +1,6 @@
-assets_task = Rake::Task.task_defined?('assets:precompile:primary') ? 'assets:precompile:primary' : 'assets:precompile'
+# assets_task = Rake::Task.task_defined?('assets:precompile') ? 'assets:precompile:primary' : 'assets:precompile'
+
+assets_task = 'assets:precompile'
 
 Rake::Task[assets_task].enhance do
   require "tinymce/rails/asset_installer"
